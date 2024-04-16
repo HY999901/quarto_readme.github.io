@@ -1,0 +1,81 @@
+# 插入表格
+
+```{r}
+#| warning: false
+library(readr)
+fastp_summary <- read_delim("data/fastp_summary.tsv",
+    delim = "\t", escape_double = FALSE,
+    trim_ws = TRUE) 
+```
+
+```{r}
+#| warning: false
+library(tidyverse)
+gene_expr = read.table(file = "data/genes.TMM.TPM.matrix",
+           header = T, row.names = 1) %>%
+  round(digits = 2)
+```
+
+## 方法一：默认方法
+
+```{r}
+fastp_summary
+```
+
+## 方法二：kable
+
+```{r}
+#| column: body
+knitr::kable(fastp_summary,
+             caption = "测序数据统计表(body)",
+             digits = 2
+             )
+```
+
+
+```{r}
+#| column: page
+knitr::kable(fastp_summary,
+             caption = "测序数据统计表(page)",
+             digits = 2
+             )
+```
+
+
+```{r}
+#| column: screen
+knitr::kable(fastp_summary,
+             caption = "测序数据统计表(screen)",
+             digits = 2
+             )
+```
+
+## 方法三：datatable
+
+```{r}
+#| column: screen
+library(DT)
+datatable(fastp_summary,
+          caption = "测序数据统计表"
+          ) %>%
+  formatPercentage(
+    columns = c("before_q30_rate", "after_q30_rate", "before_gc_content", "after_gc_content")
+  )
+```
+
+用表达矩阵测试
+
+```{r}
+#| column: screen
+library(tidyverse)
+library(DT)
+datatable(gene_expr,
+          caption = "基因表达量（TPM）",
+          filter = "top",
+          extensions = c('Buttons', 'FixedColumns'), # 显示按钮
+          options = list(
+            dom = 'Bfrtip', # 布局顺序
+            buttons = c('copy', 'csv', 'excel'),
+            fixedColumns = TRUE
+          )) 
+```

@@ -1,0 +1,112 @@
+[
+  {
+    "objectID": "Markdown基础.html",
+    "href": "Markdown基础.html",
+    "title": "2  Markdown基础",
+    "section": "",
+    "text": "2.1 项目背景\n这是一个演示项目，数据来自已发表文献的公共数据，本项目只抽取了少量数据用于演示\n本次分析的样本来源于5个时期的甜橙样本。通过 Illumina测序平台，我们进行了转录组测序，以研究不同发育时期甜橙的基因表达模式。",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Markdown基础</span>"
+    ]
+  },
+  {
+    "objectID": "Markdown基础.html#研究单位",
+    "href": "Markdown基础.html#研究单位",
+    "title": "2  Markdown基础",
+    "section": "2.2 研究单位",
+    "text": "2.2 研究单位\n本项目有XXX完成。\n\n\n\n作者\n邮箱\n\n\n\n\nXXX\nAAAAA@genek.cn\n\n\nXXX\nBBBBB@genek.cn",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Markdown基础</span>"
+    ]
+  },
+  {
+    "objectID": "Markdown基础.html#知识点总结",
+    "href": "Markdown基础.html#知识点总结",
+    "title": "2  Markdown基础",
+    "section": "2.3 知识点总结",
+    "text": "2.3 知识点总结\n\n创建 Quarto Book\nRmarkdown 基础语法\n插入静态表格\n插入静态图片\n引用参考文献\n交叉引用",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Markdown基础</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "使用 Quarto 升成数据分析报告",
+    "section": "",
+    "text": "1 Quarto 的安装",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Quarto 的安装</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#安装前准备",
+    "href": "index.html#安装前准备",
+    "title": "使用 Quarto 升成数据分析报告",
+    "section": "1.1 安装前准备",
+    "text": "1.1 安装前准备\n\n安装 R\n\n参考：https://cran.r-project.org/\n\n安装 Rstudio Server\n\n参考：https://posit.co/download/rstudio-server/\nsudo apt-get install gdebi-core\n\nwget https://download2.rstudio.org/server/jammy/amd64/rstudio-server-2023.06.2-561-amd64.deb\n\nsudo gdebi rstudio-server-2023.06.2-561-amd64.deb",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Quarto 的安装</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#安装-quarto",
+    "href": "index.html#安装-quarto",
+    "title": "使用 Quarto 升成数据分析报告",
+    "section": "1.2 安装 Quarto",
+    "text": "1.2 安装 Quarto\n参考：https://quarto.org/docs/get-started/\nwget https://github.com/quarto-dev/quarto-cli/releases/download/v1.3.450/quarto-1.3.450-linux-amd64.deb\n\nsudo gdebi quarto-1.3.450-linux-amd64.deb",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Quarto 的安装</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#设置环境",
+    "href": "index.html#设置环境",
+    "title": "使用 Quarto 升成数据分析报告",
+    "section": "1.3 设置环境",
+    "text": "1.3 设置环境\nSys.setenv(PATH=\"/pub/mambaforge20230817/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin\")",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Quarto 的安装</span>"
+    ]
+  },
+  {
+    "objectID": "插入代码.html",
+    "href": "插入代码.html",
+    "title": "3  插入代码",
+    "section": "",
+    "text": "默认\n\n\nlibrary(readr)\n\nWarning: package 'readr' was built under R version 4.2.3\n\nfastp_summary &lt;- read_delim(\"data/fastp_summary.tsv\",\n    delim = \"\\t\", escape_double = FALSE,\n    trim_ws = TRUE) \n\nRows: 10 Columns: 9\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \"\\t\"\nchr (1): sample\ndbl (8): before_total_reads, before_total_bases, before_q30_rate, before_gc_...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nfastp_summary\n\n# A tibble: 10 × 9\n   sample   before_total_reads before_total_bases before_q30_rate\n   &lt;chr&gt;                 &lt;dbl&gt;              &lt;dbl&gt;           &lt;dbl&gt;\n 1 Cs1_rep1             200000           30000000           0.916\n 2 Cs1_rep2             200000           30000000           0.920\n 3 Cs2_rep1             200000           30000000           0.911\n 4 Cs2_rep2             200000           30000000           0.914\n 5 Cs3_rep1             200000           30000000           0.926\n 6 Cs3_rep2             200000           30000000           0.920\n 7 Cs4_rep1             200000           30000000           0.926\n 8 Cs4_rep2             200000           30000000           0.935\n 9 Cs5_rep1             200000           30000000           0.921\n10 Cs5_rep2             200000           30000000           0.927\n# ℹ 5 more variables: before_gc_content &lt;dbl&gt;, after_total_reads &lt;dbl&gt;,\n#   after_total_bases &lt;dbl&gt;, after_q30_rate &lt;dbl&gt;, after_gc_content &lt;dbl&gt;\n\n\n\neval: 是否运行代码\n\n\nlibrary(readr)\nfastp_summary &lt;- read_delim(\"data/fastp_summary.tsv\",\n    delim = \"\\t\", escape_double = FALSE,\n    trim_ws = TRUE) \nfastp_summary\n\n\nwaning: 是否显示警告\n\n\nlibrary(readr)\nfastp_summary &lt;- read_delim(\"data/fastp_summary.tsv\",\n    delim = \"\\t\", escape_double = FALSE,\n    trim_ws = TRUE) \nfastp_summary\n\n# A tibble: 10 × 9\n   sample   before_total_reads before_total_bases before_q30_rate\n   &lt;chr&gt;                 &lt;dbl&gt;              &lt;dbl&gt;           &lt;dbl&gt;\n 1 Cs1_rep1             200000           30000000           0.916\n 2 Cs1_rep2             200000           30000000           0.920\n 3 Cs2_rep1             200000           30000000           0.911\n 4 Cs2_rep2             200000           30000000           0.914\n 5 Cs3_rep1             200000           30000000           0.926\n 6 Cs3_rep2             200000           30000000           0.920\n 7 Cs4_rep1             200000           30000000           0.926\n 8 Cs4_rep2             200000           30000000           0.935\n 9 Cs5_rep1             200000           30000000           0.921\n10 Cs5_rep2             200000           30000000           0.927\n# ℹ 5 more variables: before_gc_content &lt;dbl&gt;, after_total_reads &lt;dbl&gt;,\n#   after_total_bases &lt;dbl&gt;, after_q30_rate &lt;dbl&gt;, after_gc_content &lt;dbl&gt;\n\n\n\n其他选项",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>插入代码</span>"
+    ]
+  },
+  {
+    "objectID": "插入表格.html",
+    "href": "插入表格.html",
+    "title": "4  插入表格",
+    "section": "",
+    "text": "4.1 方法一：默认方法\nfastp_summary\n\n# A tibble: 10 × 9\n   sample   before_total_reads before_total_bases before_q30_rate\n   &lt;chr&gt;                 &lt;dbl&gt;              &lt;dbl&gt;           &lt;dbl&gt;\n 1 Cs1_rep1             200000           30000000           0.916\n 2 Cs1_rep2             200000           30000000           0.920\n 3 Cs2_rep1             200000           30000000           0.911\n 4 Cs2_rep2             200000           30000000           0.914\n 5 Cs3_rep1             200000           30000000           0.926\n 6 Cs3_rep2             200000           30000000           0.920\n 7 Cs4_rep1             200000           30000000           0.926\n 8 Cs4_rep2             200000           30000000           0.935\n 9 Cs5_rep1             200000           30000000           0.921\n10 Cs5_rep2             200000           30000000           0.927\n# ℹ 5 more variables: before_gc_content &lt;dbl&gt;, after_total_reads &lt;dbl&gt;,\n#   after_total_bases &lt;dbl&gt;, after_q30_rate &lt;dbl&gt;, after_gc_content &lt;dbl&gt;",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>插入表格</span>"
+    ]
+  },
+  {
+    "objectID": "插入表格.html#方法二kable",
+    "href": "插入表格.html#方法二kable",
+    "title": "4  插入表格",
+    "section": "4.2 方法二：kable",
+    "text": "4.2 方法二：kable\n\nknitr::kable(fastp_summary,\n             caption = \"测序数据统计表(body)\",\n             digits = 2\n             )\n\n\n测序数据统计表(body)\n\n\n\n\n\n\n\n\n\n\n\n\n\nsample\nbefore_total_reads\nbefore_total_bases\nbefore_q30_rate\nbefore_gc_content\nafter_total_reads\nafter_total_bases\nafter_q30_rate\nafter_gc_content\n\n\n\n\nCs1_rep1\n2e+05\n3e+07\n0.92\n0.44\n193668\n29032206\n0.93\n0.44\n\n\nCs1_rep2\n2e+05\n3e+07\n0.92\n0.44\n194542\n29161466\n0.93\n0.44\n\n\nCs2_rep1\n2e+05\n3e+07\n0.91\n0.44\n193620\n29025808\n0.92\n0.44\n\n\nCs2_rep2\n2e+05\n3e+07\n0.91\n0.44\n193806\n29053982\n0.93\n0.44\n\n\nCs3_rep1\n2e+05\n3e+07\n0.93\n0.44\n194878\n29216036\n0.94\n0.44\n\n\nCs3_rep2\n2e+05\n3e+07\n0.92\n0.44\n193966\n29078206\n0.93\n0.44\n\n\nCs4_rep1\n2e+05\n3e+07\n0.93\n0.44\n194558\n29168776\n0.94\n0.44\n\n\nCs4_rep2\n2e+05\n3e+07\n0.93\n0.44\n195686\n29335410\n0.94\n0.44\n\n\nCs5_rep1\n2e+05\n3e+07\n0.92\n0.44\n193644\n29025780\n0.93\n0.44\n\n\nCs5_rep2\n2e+05\n3e+07\n0.93\n0.44\n194690\n29184248\n0.94\n0.44\n\n\n\n\n\n\nknitr::kable(fastp_summary,\n             caption = \"测序数据统计表(page)\",\n             digits = 2\n             )\n\n\n测序数据统计表(page)\n\n\n\n\n\n\n\n\n\n\n\n\n\nsample\nbefore_total_reads\nbefore_total_bases\nbefore_q30_rate\nbefore_gc_content\nafter_total_reads\nafter_total_bases\nafter_q30_rate\nafter_gc_content\n\n\n\n\nCs1_rep1\n2e+05\n3e+07\n0.92\n0.44\n193668\n29032206\n0.93\n0.44\n\n\nCs1_rep2\n2e+05\n3e+07\n0.92\n0.44\n194542\n29161466\n0.93\n0.44\n\n\nCs2_rep1\n2e+05\n3e+07\n0.91\n0.44\n193620\n29025808\n0.92\n0.44\n\n\nCs2_rep2\n2e+05\n3e+07\n0.91\n0.44\n193806\n29053982\n0.93\n0.44\n\n\nCs3_rep1\n2e+05\n3e+07\n0.93\n0.44\n194878\n29216036\n0.94\n0.44\n\n\nCs3_rep2\n2e+05\n3e+07\n0.92\n0.44\n193966\n29078206\n0.93\n0.44\n\n\nCs4_rep1\n2e+05\n3e+07\n0.93\n0.44\n194558\n29168776\n0.94\n0.44\n\n\nCs4_rep2\n2e+05\n3e+07\n0.93\n0.44\n195686\n29335410\n0.94\n0.44\n\n\nCs5_rep1\n2e+05\n3e+07\n0.92\n0.44\n193644\n29025780\n0.93\n0.44\n\n\nCs5_rep2\n2e+05\n3e+07\n0.93\n0.44\n194690\n29184248\n0.94\n0.44\n\n\n\n\n\n\nknitr::kable(fastp_summary,\n             caption = \"测序数据统计表(screen)\",\n             digits = 2\n             )\n\n\n测序数据统计表(screen)\n\n\n\n\n\n\n\n\n\n\n\n\n\nsample\nbefore_total_reads\nbefore_total_bases\nbefore_q30_rate\nbefore_gc_content\nafter_total_reads\nafter_total_bases\nafter_q30_rate\nafter_gc_content\n\n\n\n\nCs1_rep1\n2e+05\n3e+07\n0.92\n0.44\n193668\n29032206\n0.93\n0.44\n\n\nCs1_rep2\n2e+05\n3e+07\n0.92\n0.44\n194542\n29161466\n0.93\n0.44\n\n\nCs2_rep1\n2e+05\n3e+07\n0.91\n0.44\n193620\n29025808\n0.92\n0.44\n\n\nCs2_rep2\n2e+05\n3e+07\n0.91\n0.44\n193806\n29053982\n0.93\n0.44\n\n\nCs3_rep1\n2e+05\n3e+07\n0.93\n0.44\n194878\n29216036\n0.94\n0.44\n\n\nCs3_rep2\n2e+05\n3e+07\n0.92\n0.44\n193966\n29078206\n0.93\n0.44\n\n\nCs4_rep1\n2e+05\n3e+07\n0.93\n0.44\n194558\n29168776\n0.94\n0.44\n\n\nCs4_rep2\n2e+05\n3e+07\n0.93\n0.44\n195686\n29335410\n0.94\n0.44\n\n\nCs5_rep1\n2e+05\n3e+07\n0.92\n0.44\n193644\n29025780\n0.93\n0.44\n\n\nCs5_rep2\n2e+05\n3e+07\n0.93\n0.44\n194690\n29184248\n0.94\n0.44",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>插入表格</span>"
+    ]
+  },
+  {
+    "objectID": "插入表格.html#方法三datatable",
+    "href": "插入表格.html#方法三datatable",
+    "title": "4  插入表格",
+    "section": "4.3 方法三：datatable",
+    "text": "4.3 方法三：datatable\n\nlibrary(DT)\n\nWarning: package 'DT' was built under R version 4.2.3\n\ndatatable(fastp_summary,\n          caption = \"测序数据统计表\"\n          ) %&gt;%\n  formatPercentage(\n    columns = c(\"before_q30_rate\", \"after_q30_rate\", \"before_gc_content\", \"after_gc_content\")\n  )\n\n\n\n\n\n用表达矩阵测试\n\nlibrary(tidyverse)\nlibrary(DT)\ndatatable(gene_expr,\n          caption = \"基因表达量（TPM）\",\n          filter = \"top\",\n          extensions = c('Buttons', 'FixedColumns'), # 显示按钮\n          options = list(\n            dom = 'Bfrtip', # 布局顺序\n            buttons = c('copy', 'csv', 'excel'),\n            fixedColumns = TRUE\n          )) \n\nWarning in instance$preRenderHook(instance): It seems your data is too big for\nclient-side DataTables. You may consider server-side processing:\nhttps://rstudio.github.io/DT/server.html",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>插入表格</span>"
+    ]
+  }
+]

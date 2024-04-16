@@ -1,0 +1,37 @@
+# 插入代码
+
+1.  默认
+
+```{r}
+library(readr)
+fastp_summary <- read_delim("data/fastp_summary.tsv",
+    delim = "\t", escape_double = FALSE,
+    trim_ws = TRUE) 
+fastp_summary
+```
+
+2.  eval: 是否运行代码
+
+```{r}
+#| eval: false
+library(readr)
+fastp_summary <- read_delim("data/fastp_summary.tsv",
+    delim = "\t", escape_double = FALSE,
+    trim_ws = TRUE) 
+fastp_summary
+```
+
+3.  waning: 是否显示警告
+
+```{r}
+#| warning: false
+library(readr)
+fastp_summary <- read_delim("data/fastp_summary.tsv",
+    delim = "\t", escape_double = FALSE,
+    trim_ws = TRUE) 
+fastp_summary
+```
+
+4.  其他选项
+
+![](images/代码选项.png)

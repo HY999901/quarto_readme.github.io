@@ -1,0 +1,22 @@
+project:
+  type: book
+
+book:
+  title: "使用 Quarto 升成数据分析报告"
+  author: "Yuan Guoxin"
+  date: "16/4/2024"
+  chapters:
+    - index.qmd
+    - Markdown基础.qmd
+    - 插入代码.qmd
+    - 插入表格.qmd
+
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+debug: true

@@ -1,0 +1,32 @@
+# Markdown基础
+
+## 项目背景
+
+这是一个演示项目，数据来自已发表文献的公共数据，本项目只抽取了少量数据用于演示
+
+本次分析的样本来源于**5个时期的甜橙**样本。通过 [Illumina](https://www.illumina.com/)测序平台，我们进行了转录组测序，以研究不同发育时期甜橙的基因表达模式。
+
+## 研究单位
+
+本项目有[XXX](https://genek.cn)完成。
+
+| 作者 | 邮箱            |
+|------|-----------------|
+| XXX  | AAAAA\@genek.cn |
+| XXX  | BBBBB\@genek.cn |
+
+![](https://photo.tuchong.com/15841554/f/55494598.jpg){width="355"}
+
+## 知识点总结
+
+-   [创建 Quarto Book](https://quarto.org/docs/books/)
+
+-   [Rmarkdown 基础语法](https://quarto.org/docs/authoring/markdown-basics.html)
+
+-   [插入静态表格](https://quarto.org/docs/authoring/tables.html)
+
+-   [插入静态图片](https://quarto.org/docs/authoring/figures.html)
+
+-   [引用参考文献](https://quarto.org/docs/authoring/footnotes-and-citations.html)
+
+-   [交叉引用](https://quarto.org/docs/authoring/cross-references.html)
